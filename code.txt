@@ -1,10 +1,16 @@
 texto
 livro
 biblioteca
+otavio
 cachorro
+faca
+assassinato
+atropelamento
 gato
 lua
 sol
+hoje
 terra
 espaco
-marte
+nada
+terra

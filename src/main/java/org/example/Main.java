@@ -38,6 +38,7 @@ public class Main {
                     }
             }
 
+            // Colocar os dois ":/" para serem uma operação só, mas diferentes ao mesmo tempo
             if (command.startsWith(":/")){
                 String element = command.split(" ")[1];
                 if (list == null){
@@ -55,6 +56,7 @@ public class Main {
                     } while (current != list.getHead());
                 }
             }
+
 
             if (command.startsWith(":/")){
                 String[] commandContent = command.split(" ");
@@ -89,6 +91,22 @@ public class Main {
                         newLine = input.nextLine();
                         posLin++;
                     }
+                    System.out.println("Novas linhas adicionadas com sucesso.");
+                }
+            }
+
+            if (command.startsWith(":i")){
+                String[] commandContent = command.split(" ", 3);
+                int posLin = Integer.parseInt(commandContent[1]);
+                String newLine = commandContent[2];
+                if(list == null){
+                    System.out.println("Lista ainda nao foi criada utilize o comando (:e) primeiro\n");
+                }else{
+                    System.out.println("Inserindo a nova linha na posição: " + posLin);
+                    if(posLin > 1){
+                        posLin = posLin - 2;
+                    }
+                    list.insertAt(posLin, newLine);
                     System.out.println("Novas linhas adicionadas com sucesso.");
                 }
             }
