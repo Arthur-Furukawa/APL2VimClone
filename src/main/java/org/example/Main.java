@@ -21,6 +21,8 @@ public class Main {
                     list = fileOperations.transferFileDataToDoubleLinkedList(commandContent[1]);
                 }catch (FileNotFoundException e){
                     System.out.println("Epa! Arquivo nao encontrado. tente novamente\n");
+                }catch (ArrayIndexOutOfBoundsException e){
+                    System.out.println("Epa digite um arquivo por favor\n");
                 }
             }
 
