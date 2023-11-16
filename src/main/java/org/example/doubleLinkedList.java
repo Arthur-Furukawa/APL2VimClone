@@ -25,6 +25,8 @@ public class doubleLinkedList {
         }
     }
 
+    public Node getHead() {return this.head;}
+
     public int getCount() { return count; }
 
     // Percorre a DLL em ordem crescente
