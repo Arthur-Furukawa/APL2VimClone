@@ -76,6 +76,22 @@ public class Main {
                     } while (current != list.getHead());
                 }
             }
+
+            if (command.startsWith(":a")){
+                int posLin = Integer.parseInt(command.split(" ")[1]);
+                if (list == null){
+                    System.out.println("Lista ainda nao foi criada utilize o comando (:e) primeiro\n");
+                }else{
+                    System.out.println("Digite as novas linhas. Após digitar as novas linhas, utilize ':a' em uma linha vazia.");
+                    String newLine = input.nextLine();
+                    while (!newLine.equals(":a")){
+                        list.insertAt(posLin, newLine);
+                        newLine = input.nextLine();
+                        posLin++;
+                    }
+                    System.out.println("Novas linhas adicionadas com sucesso.");
+                }
+            }
         }
         System.out.println("\nObrigado por usar nosso programa :)\n");
     }
